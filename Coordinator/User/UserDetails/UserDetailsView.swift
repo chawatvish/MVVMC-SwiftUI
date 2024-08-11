@@ -32,6 +32,8 @@ struct UserDetailsView: View {
 
 struct UserDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDetailsView(viewModel: UserDetailsViewModel(userID: 0))
+        let viewModel = UserDetailsViewModel(userID: 1,
+                                             repository: UserDetailRepository.default)
+        return UserDetailsView(viewModel: viewModel)
     }
 }

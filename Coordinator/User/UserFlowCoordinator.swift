@@ -65,7 +65,7 @@ final class UserFlowCoordinator: ObservableObject, Hashable {
     }
     
     private func userDetailsView() -> some View {
-        let viewModel = UserDetailsViewModel(userID: userID ?? 0)
+        let viewModel = UserDetailsViewModel(userID: userID ?? 0, repository: UserDetailRepository.default)
         let userDetailsView = UserDetailsView(viewModel: viewModel)
         return userDetailsView
     }

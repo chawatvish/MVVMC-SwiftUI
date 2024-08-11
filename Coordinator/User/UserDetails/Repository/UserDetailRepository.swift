@@ -1,29 +1,29 @@
-//
-//  PokemonRepository.swift
-//  Practice-UI
-//
-//  Created by Chawatvish Worrapoj on 3/8/2567 BE.
-//
-
 import Foundation
 import Combine
 
-protocol PokemonRepositoryProtocol {
-    func fetchPokemon() -> AnyPublisher<[PokemonEntities], any Error>
+protocol UserDetailRepositoryProtocol {
+    func fetchProfile() -> AnyPublisher<[Profile], any Error>
 }
 
-struct PokemonRepository: PokemonRepositoryProtocol {
+struct UserDetailRepository: UserDetailRepositoryProtocol {
     
-    let remoteDataSource : PokemonRemoteDataSourceProtocol
-    let LocalDataSource : PokemonLocalDataSourceProtocol
+    let remoteDataSource: UserDetailRemoteDataSourceProtocol
+    let localDataSource: UserDetailLocalDataSourceProtocol
     
-    init(remoteDataSource: PokemonRemoteDataSourceProtocol,
-         LocalDataSource : PokemonLocalDataSourceProtocol) {
+    init(remoteDataSource: UserDetailRemoteDataSourceProtocol,
+         localDataSource : UserDetailLocalDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
-        self.LocalDataSource = LocalDataSource
+        self.localDataSource = localDataSource
     }
     
-    func fetchPokemon() -> AnyPublisher<[PokemonEntities], any Error> {
-        remoteDataSource.fetchPokemon()
+    func fetchProfile() -> AnyPublisher<[Profile], any Error> {
+        remoteDataSource.fetchProfile()
+    }
+}
+
+extension UserDetailRepository {
+    static var `default`: UserDetailRepository {
+        UserDetailRepository(remoteDataSource: UserDetailRemoteDataSource(),
+                             localDataSource: UserDetailLocalDataSource())
     }
 }
