@@ -70,7 +70,7 @@ final class UserFlowCoordinator: ObservableObject, Hashable {
         return userDetailsView
     }
     
-    // MARK: View Bindings
+    // MARK: UsersListView View Bindings
     private func bind(view: UsersListView) {
         view.didClickUser
             .receive(on: DispatchQueue.main)
