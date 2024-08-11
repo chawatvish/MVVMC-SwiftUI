@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380614732C5F54BE00803B25 /* UserDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380614702C5F54BE00803B25 /* UserDetailRemoteDataSource.swift */; };
+		380614742C5F54BE00803B25 /* UserDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380614712C5F54BE00803B25 /* UserDetailRepository.swift */; };
+		380614752C5F54BE00803B25 /* UserDetailLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3806146F2C5F54BE00803B25 /* UserDetailLocalDataSource.swift */; };
 		810DD5492A014DDD0088F0F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DD5482A014DDD0088F0F8 /* User.swift */; };
 		8144B6532A03847B003F2A60 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144B6522A03847B003F2A60 /* Profile.swift */; };
 		8152F94629F64FF200C21C80 /* UserDetailsViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8152F94529F64FF200C21C80 /* UserDetailsViewModels.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3806146F2C5F54BE00803B25 /* UserDetailLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailLocalDataSource.swift; sourceTree = "<group>"; };
+		380614702C5F54BE00803B25 /* UserDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRemoteDataSource.swift; sourceTree = "<group>"; };
+		380614712C5F54BE00803B25 /* UserDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRepository.swift; sourceTree = "<group>"; };
 		810DD5482A014DDD0088F0F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8144B6522A03847B003F2A60 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8152F94529F64FF200C21C80 /* UserDetailsViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModels.swift; sourceTree = "<group>"; };
@@ -66,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3806146D2C5F54BA00803B25 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8144B6522A03847B003F2A60 /* Profile.swift */,
+				3806146F2C5F54BE00803B25 /* UserDetailLocalDataSource.swift */,
+				380614702C5F54BE00803B25 /* UserDetailRemoteDataSource.swift */,
+				380614712C5F54BE00803B25 /* UserDetailRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		817C6C4329F4F6510042532E = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +154,9 @@
 		817C6C6429F4FD3C0042532E /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
+				3806146D2C5F54BA00803B25 /* Repository */,
 				817C6C7029F5AA110042532E /* UserDetailsView.swift */,
 				8152F94529F64FF200C21C80 /* UserDetailsViewModels.swift */,
-				8144B6522A03847B003F2A60 /* Profile.swift */,
 			);
 			path = UserDetails;
 			sourceTree = "<group>";
@@ -312,6 +329,9 @@
 				8152F94629F64FF200C21C80 /* UserDetailsViewModels.swift in Sources */,
 				81E0706D2A0E38FC00B4F84D /* PrivacySettingsView.swift in Sources */,
 				81E070782A0E412900B4F84D /* ProfileFlowCoordinator.swift in Sources */,
+				380614732C5F54BE00803B25 /* UserDetailRemoteDataSource.swift in Sources */,
+				380614742C5F54BE00803B25 /* UserDetailRepository.swift in Sources */,
+				380614752C5F54BE00803B25 /* UserDetailLocalDataSource.swift in Sources */,
 				817C6C7329F5AD930042532E /* UsersListViewModel.swift in Sources */,
 				81E070692A0E354E00B4F84D /* SettingsFlowCoordinator.swift in Sources */,
 				8144B6532A03847B003F2A60 /* Profile.swift in Sources */,
